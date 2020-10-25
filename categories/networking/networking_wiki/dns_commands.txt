@@ -1,0 +1,41 @@
+# Some DNS commands
+
+- Recursive DNS 
+	- DNS server used for resolving other people's domains. A good example would be 8.8.8.8 and 1.1.1.1
+
+- Authoritative DNS
+	- Provides actual answer to dns queries.
+	- It contains the zones for its domain.
+	- It can't answer queries that are not referencing its entries.
+	- It only replies to its own registers.
+
+### Some specific commands
+- host + ip or name
+host google.com.br
+host 200.17.33.7
+
+- Checking registers 
+host -t a ifce.edu.br
+host -t ns google.com
+host -t mx yahoo.com
+
+- Digging for more information
+dig facebook.com
+dig +trace ifce.edu.br
+dig uol.com.br +short
+dig @8.8.8.8 alura.com.br
+
+- Looking up for more information
+nslookup
+nslookup -q=ns ifce.edu.br
+nslookup -q=a uol.com.br
+nslookup -q=mx yahoo.com
+nslookup -q=soa g1.com.br
+
+- Nslookup on interactive mode
+nslookup
+server #which dns server to use for translation or DNS queries?
+server google.com
+server 200.17.33.7
+set type=ns
+set type=a

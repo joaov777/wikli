@@ -1,0 +1,41 @@
+####### GIT BASIC COMMANDS ######
+
+-- CLONING YOUR REPO
+git clone https://github.com/<username>/<repository>.git
+
+-- SET UP GIT USER FOR ALL REPOSITORIES
+git config --global user.name "joaov777"
+git config --global user.email joaov777@gmail.com
+
+-- CHECKING REMOTES
+git remote -v
+
+-- ADDING A NEW REMOTE
+git remote add <remote_name> <remote_url>
+git remote add origin https://github.com/joaov777/mainconf.git
+git remote add origin git@github.com:joaov777/mainconf.git
+
+-- CHANGING REMOTE URL
+git remote set-url <remote> <repo>
+git remote set-url origin https://github.com/<username>/<repository>.git
+git remote set-url origin git@github.com:<username>/<repository>.git
+
+Examples.:
+git remote set-url origin https://github.com/joaov777/mainconf.git
+git remote set-url origin git@github.com:joaov777/mainconf.git
+
+-- REMOVING A REMOTE
+git remote rm <remote_name>
+
+-- PULLING FROM A REMOTE
+git pull
+
+-- PUSHING TO A REMOTE
+git push <REMOTE_NAME> <BRANCH_NAME>
+git push origin master
+
+-- STAGING CHANGES
+git add .
+
+-- PERFORMING A COMMIT
+git commit -m "Add a message here"
